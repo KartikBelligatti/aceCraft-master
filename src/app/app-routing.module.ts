@@ -32,6 +32,10 @@ import { AboutComponent } from './components/about/about.component';
 import { ProductionComponent } from './components/production/production.component';
 import { ReturnsComponent } from './components/returns/returns.component';
 import { CareComponent } from './components/care/care.component';
+import { TermsComponent } from './components/terms/terms.component';
+import { StylingComponent } from './components/BlogDescriptions/styling/styling.component';
+
+
 const routes: Routes = [
   {path:'',redirectTo:'./Home',pathMatch:'full'},
   {path:'',component:HomeComponent},
@@ -58,7 +62,7 @@ const routes: Routes = [
   {path:"rightway",component:RightwayComponent},
   {path:"selecting",component:SelectingComponent},
 
- // {path:"styling",component:styling},
+ {path:"styling",component:StylingComponent},
  {path:"theacecraftdifference",component:TheAcecraftDifferenceComponent},
  {path:"tipsforgreateoutfit",component:TipsforgreateoutfitComponent},
  {path:"workwearforallseason",component:WorkWearForAllSeasonsComponent},
@@ -68,7 +72,8 @@ const routes: Routes = [
  {path:"about",component:AboutComponent},
  {path:"production",component:ProductionComponent},
  {path:"returns",component:ReturnsComponent},
- {path:"care",component:CareComponent}
+ {path:"care",component:CareComponent},
+ {path:"terms",component:TermsComponent}
 ];
 
 @NgModule({

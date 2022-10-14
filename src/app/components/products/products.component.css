@@ -5,7 +5,11 @@
 }
 
 .container {
-  border: 1px solid lightgray;
+
+  border-left: 1px solid lightgray;
+
+
+  padding-right: 170px;
 }
 
 .card-img {
@@ -16,3 +20,16 @@
   text-align: center;
   margin-top: 10px;
 }
+.o {
+  border: 1px solid #d5d6d9;
+  padding: 8px 13px;
+  font-size: 13px;
+  color: #7e818c;
+  cursor: pointer;
+  position: relative;
+  width: 190px;
+  height: 34px;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+

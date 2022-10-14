@@ -1,18 +1,3 @@
-.logo {
-    padding-left: 42%;
-
-}
-
-.sl1 {
-    color: red;
-}
-
-.school {
-    background-image: url('http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/home4.jpg');
-    height: 200px;
-    width: 100%;
-
-}
 
 .logos {
     width: 60px;
@@ -21,8 +6,14 @@
 
 .schlogo {
     list-style: none;
-    margin-left: 28%;
+    margin-left:10%;
+    margin-right:10%;
+    
 
+}
+.sch
+{
+    width: 10%;
 }
 
 .schlogo li {
@@ -30,28 +21,116 @@
     float: left;
     margin-left: 30px;
 }
-
+ #pot {
+    bottom: 15%;
+    position: absolute;
+    animation: linear infinite;
+    animation-name: run;
+    animation-duration: 1s;
+}
 .Schoollogo {
     width: 100%;
-    height: 100px;
+    height: 115px;
+    background-color: white;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.pt{
+    padding-top: 10px!important;
+}
+
+.pb{
+    padding-bottom: 10px!important;
+}
+
+
 .section1 {
-    background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/Home-1.jpg);
+    background-image: url(http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/School-1.jpg);
     background-size: cover;
     background-attachment: fixed;
-    height: 500px;
+    min-height: 100vh;
+    background-position-x: center;
+    background-position-y: 122px;
+    background-repeat: no-repeat;
 }
 
 .section1 h1 {
-    padding-top: 15%;
+    padding-top: 18%;
     margin-left: 25%;
-    font-size: 50px;
-    color: #EDEDED;
+    margin-right: 25%;
+    font-size: 40px;
+    color: gray;
+}
+.fas {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-size: 20px;
+    padding: 310px;
+   
+}
+.fa-chevron-down {
+    transition: all 0.3s ease;
+    animation: block-link-arrow-down 1s infinite;
+      -webkit-animation: block-link-arrow-down 1s infinite;
+      -moz-animation: block-link-arrow-down 1s infinite;
+    display: inline-block;
+    font-size: 16px;
 }
 
+.signature {
+    font-family: blenheim;
+    font-size: 18px;
+    position: relative;
+    margin: auto;
+    width: 200px;
+}
+
+p.signature::after, p.signature::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    border: 1px solid #ffffff73;
+    top: 40%;
+    left: 0;
+}
+
+p.signature::after {
+    right: 0;
+    left: auto;
+}
+   
+.proximaThin {
+    font-family: "proxima-thin";
+}
+
+.logoName {
+    font-family: courier;
+    letter-spacing: 5px;
+}
+
+.ms-mb-x {
+    margin-bottom: 25px!important;
+}
+
+.ms-fs-20 {
+    font-size: 20px !important;
+}
+
+
+
+
+.btn-default {
+    border-color: #fff !important;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+
 .section2 {
-    height: 700px;
+    height: 500px;
     background-color: black;
 }
 
@@ -59,50 +138,69 @@
     color: gray;
     font-size: 30px;
     font-size: 40px;
-    padding-top: 18%;
+    padding-top: 15%;
     text-align: center;
 }
 
+.proximaBold {
+    font-family: "proxima-bold";
+}
+
+.pad 
+{
+    padding-top: 50px;
+}
+
+
+
 .section3 {
-    height: 1200px;
-    background-image: url('http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/home3.jpg');
+    height: 700px;
+    background-image: url('http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/School-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position-y: 30%;
+    background-position-y: 100%;
+    background-size: auto 80vh;
+   
+    height: 1800px;
+    
 }
+
 
 .section3 p {
     color: #DDDDDD;
     font-size: 50px;
     text-align: center;
-    padding-top: 15%;
+    padding-top: 105%;
 }
 
 .section3 h3 {
     color: #DDDDDD;
     text-align: center;
-    padding-top: 25%;
+    padding-top: 85%;
     font-size: 50px;
 }
 
 .section4 {
-    height: 2500px;
-    background-color: #000000;
+    margin-bottom: -200px;
+    height: 1650px;
+    background-color: #0e0d0d;
 }
 
 .section4 h1 {
     text-align: right;
-    font-weight: bold;
-    padding-top: 15%;
-    padding-right: 10%;
+    font-size: 24px;
+    
+    padding-top: 100px;
+    padding-right: 70px;
     color: #BBBBBB;
 }
 
+
 .section4 p {
     text-align: right;
-    padding-top: 2%;
-    padding-right: 10%;
+    padding-top: 5px;
+    padding-right: 5%;
     font-size: 25px;
     color: #BBBBBB;
 }
@@ -110,51 +208,26 @@
 .banner1 {
     height: 1900px;
     padding-left: 8%;
+
 }
 
 .banner {
-    width: 90%;
+    width: 85%;
 }
 
 .section5 {
-    height: 600px;
-    background-image: url('https://img.freepik.com/free-photo/office-desk-with-black-notepad-pen-black-background-top-view-with-copy-space-business-goals-objectives-concept_94046-6021.jpg');
-    background-size: cover;
+    height: 560px;
+   
+    background-image: url('http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/School-41.jpg');
+    background-size: center;
     background-repeat: no-repeat;
+    margin-top: 350px;
+    margin-left: 00px;
+    background-size: auto 80vh;
 
 }
 
-.btn1 {
-    background-color: transparent;
-    color: white;
-    border-color: white;
-    width: 10%;
-    height: 30px;
-}
 
-.footer{
-    padding-top: 15%;
-}
-
-.footer h5 {
-    text-align: center;
-    font-size: 24px;
-    color: white;
-}
-.footer h6 {
-    text-align: center;
-    font-size: 24px;
-    color: white;
-}
-.footer p {
-    text-align: center;
-    font-size: 24px;
-    color: white;
-}
-
-.footer2 {
-
-    color: white;
-    margin-top: 5%;
-    text-align: center;
-}
+.linegap {
+    line-height: 30px;
+ }

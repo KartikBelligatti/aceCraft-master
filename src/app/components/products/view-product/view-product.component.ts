@@ -15,12 +15,19 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class ViewProductComponent implements OnInit {
   productId!:number;
+  responsiveOptions:any;
+  products:any[] =[];
+  hidePaginator=""
   //productData:any;
+  receivequantity($event: number) {
+    this.quantity = $event;
+    }
   constructor(private productService:ProductsService,
     private router:Router,private http:HttpClient,
-    private actRoute:ActivatedRoute,private cartsvc:CartService,private route:ActivatedRoute) { 
-      
+    private actRoute:ActivatedRoute,private cartsvc:CartService,private route:ActivatedRoute,private productsvc:ProductsService) {
+
     }
+
     cart:CartItem={
       id:0,
       title: '',
@@ -42,8 +49,9 @@ export class ViewProductComponent implements OnInit {
     // cartCount(value: number) {
     //   this.cartCountEvent.emit(value);
     // }
-sizes :number=0
-quantity:number=0
+sizes :number=0;
+waists:number=0;
+quantity:number=1;
 //count:number=0//cart
     addToCart(product:any){
       this.cart.title=product.title;
@@ -63,9 +71,9 @@ quantity:number=0
       console.log(product.id);
       this.cartsvc.getCount();
       //get cart count
-      // this.cartsvc.getCartItems().subscribe (     
+      // this.cartsvc.getCartItems().subscribe (
       //   (response) =>
-      //    {        
+      //    {
       //     this.count=response.length;
       //      console.log(this.count);
       //    }
@@ -87,7 +95,7 @@ quantity:number=0
      }
     productDatas:any;
     //products:Products[]=[];
-    products:any;   
+
   ngOnInit() {
     this.route.params.subscribe((params: { [x: string]: number; })=>{
       this.productId=params['id']
@@ -95,7 +103,7 @@ quantity:number=0
     this.productService.getProductsById(this.productId).subscribe(products=>{
       this.productDatas=products as Products
     })
-   
+
   /*  this.productId = this.actRoute.snapshot.params['id'];
      this.productService.getProductsById(this.productId).subscribe(
        (response) =>
@@ -105,7 +113,38 @@ quantity:number=0
          console.log(this.productData);
        }
      )*/
+     this.productsvc.getProducts().subscribe(
+      (response) =>
+      {
+        this.products = response
+      },
+
+      (error) =>
+      {
+        console.log("Error Occured: "+error );
+
+      }
+
+    )
+     this.responsiveOptions = [
+      {
+          breakpoint: '1024px',
+          numVisible: 3,
+          numScroll: 3
+      },
+      {
+          breakpoint: '768px',
+          numVisible: 2,
+          numScroll: 2
+      },
+      {
+          breakpoint: '560px',
+          numVisible: 1,
+          numScroll: 1
+      }
+    ];
   }
+
   }
 
 

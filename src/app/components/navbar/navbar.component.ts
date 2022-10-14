@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit {
   //   this.cartCount=data;
   //   console.log("Subscriber got data >>>>> "+ this.cartCount);
   // });
-auth:boolean=false
+auth:boolean=true
 cartCount: number=0;
   ngOnInit(): void {  
    

@@ -1,10 +1,11 @@
 #box-with-image {
-
+margin-top: 100px;
   display: block;
   background-image: url('https://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/MJK07160_new.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 120%;
+ width: 1700px;
+ height: 700px;
 }
 
 .banner .container {
@@ -25,7 +26,7 @@
 #h3textthin {
   font-family: "proxima-thin";
   font-weight: lighter;
-  color: #978f8f;
+  color: #fff;
   font-size: 24px;
 }
 

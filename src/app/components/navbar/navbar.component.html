@@ -1,112 +1,122 @@
-<nav class="navbar bg-dark">
-  <h1 class="mx-auto" style=" letter-spacing: 7px;color:white; ">acecraft</h1>
-</nav>
-<nav class="navbar navbar-expand-lg bg-dark " style="color: WHITE;">
+<div class="navigation fixed-top">
+  <h1 class="heading" routerLink='Home'>
+      acecraft
+  </h1>
+<nav class="navbar navbar-expand-lg " style="color: rgb(255, 255, 255);">
   <button class="navbar-toggler" style="color:white;" type="button" data-toggle="collapse"
     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
     aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" style="color:white"></span>
-    <span class="navbar-toggler-icon" style="color:white"></span>
-    <span class="navbar-toggler-icon" style="color:white"></span>
+    <span class="fa fa-bars" style="color:white">
+    </span>
   </button>
   <div class="collapse navbar-collapse text-center " id="navbarSupportedContent">
-    <ul class="navbar-nav mx-auto text-center ">
-      <li class="nav-item active">
-        <button routerLink='Home' mat-button class="menu-button">
-          <span>Home</span>
-        </button>
+    <ul class="navbar-nav" style="margin-left: 550px;">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="school"><b style="margin-right:23px">SCHOOL</b></a>
       </li>
-      <li class="nav-item" >
-        <button routerLink='school' mat-button class="menu-button">
-          <span>SCHOOL</span>
-        </button>
+     
+      <li class="nav-item">
+        <a class="nav-link" routerLink="college"><b style="margin-right:23px">COLLEGE</b></a>
       </li>
-      <li class="nav-item" >
-        <button routerLink='college' mat-button class="menu-button">
-          <span>COLLEGE</span>
-        </button>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="enterprise"><b style="margin-right:23px">ENTERPRISE</b></a>
       </li>
-      <!-- <li class="nav-item " *ngIf="auth">
-        <button routerLink='college' mat-button class="menu-button">
-          <span>COLLEGE</span>
-        </button>
-      </li> -->
-      <li class="nav-item " >
-        <button routerLink='enterprise' mat-button class="menu-button">
-          <span>ENTERPRISE</span>
-        </button>
-      </li>
-      <li class="nav-item " >
-        <button routerLink='notes' mat-button class="menu-button">
-          <span>NOTES</span>
-        </button>
-      </li>
-      <!-- <li class="nav-item ">
-        <button routerLink='airenMask' mat-button class="menu-button">
-          <span>AIREN MASK</span>
-        </button>
-      </li> -->
-      <li class="nav-item " *ngIf="auth">
-        <button routerLink='product' mat-button class="menu-button">
-          <span>PRODUCT</span>
-        </button>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="notes"><b style="margin-right:23px">NOTES</b></a>
       </li>
     </ul>
-    <ul class=" navbar-nav my-2 my-lg-0">
+    <ul class="navbar-nav" style="margin-left:280px">
       <li class="nav-item">
-        <a class="menu-button " mat-button style="font-size:20px;color:white" type="button" data-toggle="collapse"
-          data-target="#collapseExample1" aria-controls="collapseExample1" aria-expanded="false">
-          <span class="fa fa-gear"></span>
-        </a>
-      </li>
+      <div class="dropright">
+        <a class="menu-button " mat-button style="font-size:20px;color:white;margin-left: 100px;" type="button" data-toggle="dropdown"
+        data-target="#collapseExample1" aria-controls="collapseExample1" aria-expanded="false">
+        <!-- <span class="fa fa-cog"></span> -->
+        <img
+         style="width: 21px; margin-right:50px;"
+        src="http://cdn.storehippo.com/s/5997cc7c4d6e8ffa20e50aae/ms.files/setting.png" alt="">
+      </a>
+        <div class="dropdown-menu" style="background: transparent; width: 10px;margin-right: 50px;
+        background-image: linear-gradient(to left, rgb(0 0 0),#5a131300);
+        height: 100vh;
+        border: none;">
+        <br><br>
+          <li class="nav-item" *ngIf="auth">
+            <div class="nav-link" routerLink='login'>
+              <span class="drop-items">Sign In 
+                <span class='fa fa-solid fa-sign-in drop-items'></span></span>
+              
+            </div>
+          </li>
+          <li class="nav-item" *ngIf="auth">
+            <div class="nav-link" routerLink='register' >
+              <span class="drop-items">Register
+              
+              <span class='fa fa-solid fa-registered drop-items'></span>
+              </span>
+             
+            </div>
+          </li>
+          <li class="nav-item" >
+            <div class="nav-link" routerLink='orderStatus'>
+              <span class="drop-items">Order
+               
+              <span class='fa fa-solid fa-calendar drop-items' ></span>
+            </span>   
+          </div>
+          </li>
+          <li class="nav-item" style="text-decoration: none;">
+            <div class="nav-link" routerLink='contact'>
+              <span class="drop-items">Contact  <span class='fa fa-solid fa-address-book drop-items' ></span></span>
+          </div>
+          </li>
+          <li class="nav-item" style="text-decoration: none;" *ngIf="!auth">
+            <div class="nav-link" routerLink='contact'>
+              <span class="drop-items">Account  <span class='fa fa-solid fa-user drop-items' ></span></span>
+          </div>
+          </li> 
+          <p *ngIf="!auth" class="logout_text" routerLink="login">
+            Logout
+          </p>
+        </div>
+      </div>
+    </li>
       <li class="nav-item ">
-        <button mat-button routerLink='cartItem' matBadge="{{getCartCount()}}" matBadgePosition="after" color="gray"
-          ngModel>
-          <span class="fa fa-cart-plus" style="font-size:20px;color:white"></span>
+        <button mat-button routerLink='cartItem' matBadge="" matBadgePosition="after" color="gray" style="outline:none;background: transparent;" ngModel>
+          <span class="fa fa-shopping-cart" style="font-size:20px;color:white; ">
+            <sup class="text-light" style="font-size: 15px;
+            margin-left: 3px;
+            background-color: grey;
+            padding: 0px 4px 2px 1px;
+            border: 1px solid grey;
+            border-radius: 23px;">
+               <!-- {{getCartCount()}} -->
+               0
+              <!-- 1 -->
+          </sup></span>
         </button>
       </li>
-      <li class="nav-item " *ngIf="auth">
+      <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    ...
+  </div>
+</div> -->
+      <!-- <li class="nav-item " *ngIf="auth">
         <button routerLink='login' mat-button class="menu-button">
           <span>LOGOUT</span>
         </button>
-      </li>
+      </li> -->
     </ul>
   </div>
 </nav>
-<nav class=" navbar navbar-expand-sm ">
+<!-- <nav class=" navbar navbar-expand-sm ">
   <ul id="collapseExample1" class=" ml-auto collapse "
-    style="background-color:black;color:argb(74, 104, 104);color: aliceblue;">
-    <li class="nav-item" *ngIf="!auth">
-      <button routerLink='login' mat-button class="menu-button" data-toggle="collapse" data-target="#collapseExample1"
-        aria-controls="collapseExample1" aria-expanded="false">
-        <span>Sign In</span>
-        <span class="line"></span>
-        <span class='fa fa-solid fa-sign-in' style="font-size:14px;color:white"></span>
-      </button>
-    </li>
-    <li class="nav-item" *ngIf="!auth">
-      <button routerLink='register' mat-button class="menu-button" data-toggle="collapse"
-        data-target="#collapseExample1" aria-controls="collapseExample1" aria-expanded="false">
-        <span>Register</span>
-        <span class="line"></span>
-        <span class='fa fa-solid fa-registered' style="font-size:14px;color:white"></span>
-      </button>
-    </li>
-    <li class="nav-item" *ngIf="!auth">
-      <button routerLink='orderStatus' mat-button class="menu-button" data-toggle="collapse"
-        data-target="#collapseExample1" aria-controls="collapseExample1" aria-expanded="false">
-        <span>Order Status</span>
-        <span class="line"></span>
-        <span class='fa fa-solid fa-calendar' style="font-size:14px;color:white"></span>
-      </button>
-    </li>
-    <li class="nav-item" style="text-decoration: none;">
-      <button routerLink='contact' mat-button class="menu-button" data-toggle="collapse" data-target="#collapseExample1"
-        aria-controls="collapseExample1" aria-expanded="false">
-        <span>Contact</span>
-        <span class="line"></span>
-        <span class='fa fa-solid fa-address-book' style="font-size:14px;color:white"></span>
-      </button>
-    </li>
+    style="background-color:transparent ;color:argb(74, 104, 104);color: aliceblue;">
+    
   </ul>
-</nav>
+</nav> -->
+</div>

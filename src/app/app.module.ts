@@ -51,6 +51,9 @@ import { AboutComponent } from './components/about/about.component';
 import { ProductionComponent } from './components/production/production.component';
 import { ReturnsComponent } from './components/returns/returns.component';
 import { CareComponent } from './components/care/care.component';
+import { TermsComponent } from './components/terms/terms.component';
+import { StylingComponent } from './components/BlogDescriptions/styling/styling.component';
+import { OrderstatusComponent } from './components/orderstatus/orderstatus.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +97,10 @@ import { CareComponent } from './components/care/care.component';
     AboutComponent,
     ProductionComponent,
     ReturnsComponent,
-    CareComponent
+    CareComponent,
+    TermsComponent,
+    StylingComponent,
+    OrderstatusComponent
     
   
  
