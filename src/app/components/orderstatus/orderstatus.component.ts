@@ -7,12 +7,19 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./orderstatus.component.css']
 })
 export class OrderstatusComponent implements OnInit {
+  orderFrom: any;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  
+   order(){
+    if(this.orderFrom.value===null)
+
+    alert("Please Insert a Valid Tracking Number");
+    else
+    alert("Please enter the tracking id")
+  }
 
 }

@@ -54,6 +54,14 @@ import { CareComponent } from './components/care/care.component';
 import { TermsComponent } from './components/terms/terms.component';
 import { StylingComponent } from './components/BlogDescriptions/styling/styling.component';
 import { OrderstatusComponent } from './components/orderstatus/orderstatus.component';
+import { AccountComponent } from './components/account/account.component';
+import { AddressComponent } from './components/account/address/address.component';
+import { OrderHistoryComponent } from './components/account/order-history/order-history.component';
+import { PersonalInfoComponent } from './components/account/personal-info/personal-info.component';
+import { TrackOrderComponent } from './components/account/track-order/track-order.component';
+import { WalletComponent } from './components/account/wallet/wallet.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +108,15 @@ import { OrderstatusComponent } from './components/orderstatus/orderstatus.compo
     CareComponent,
     TermsComponent,
     StylingComponent,
-    OrderstatusComponent
+    OrderstatusComponent,
+    AccountComponent,
+    AddressComponent,
+    OrderHistoryComponent,
+    PersonalInfoComponent,
+    TrackOrderComponent,
+    WalletComponent,
+    ForgotPasswordComponent,
+    CheckoutComponent,
     
   
  

@@ -34,6 +34,15 @@ import { ReturnsComponent } from './components/returns/returns.component';
 import { CareComponent } from './components/care/care.component';
 import { TermsComponent } from './components/terms/terms.component';
 import { StylingComponent } from './components/BlogDescriptions/styling/styling.component';
+import { OrderstatusComponent } from './components/orderstatus/orderstatus.component';
+import { AccountComponent } from './components/account/account.component';
+import { AddressComponent } from './components/account/address/address.component';
+import { OrderHistoryComponent } from './components/account/order-history/order-history.component';
+import { PersonalInfoComponent } from './components/account/personal-info/personal-info.component';
+import { TrackOrderComponent } from './components/account/track-order/track-order.component';
+import { WalletComponent } from './components/account/wallet/wallet.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 
 const routes: Routes = [
@@ -61,7 +70,6 @@ const routes: Routes = [
   {path:"dressingtosucceed",component:DressingtosucceedComponent},
   {path:"rightway",component:RightwayComponent},
   {path:"selecting",component:SelectingComponent},
-
  {path:"styling",component:StylingComponent},
  {path:"theacecraftdifference",component:TheAcecraftDifferenceComponent},
  {path:"tipsforgreateoutfit",component:TipsforgreateoutfitComponent},
@@ -73,7 +81,16 @@ const routes: Routes = [
  {path:"production",component:ProductionComponent},
  {path:"returns",component:ReturnsComponent},
  {path:"care",component:CareComponent},
- {path:"terms",component:TermsComponent}
+ {path:"terms",component:TermsComponent},
+ {path:"orderstatus",component:OrderstatusComponent},
+ {path:"account",component:AccountComponent},
+ {path:"address",component:AddressComponent},
+ {path:"order-history",component:OrderHistoryComponent},
+ {path:"personal",component:PersonalInfoComponent},
+ {path:"track",component:TrackOrderComponent},
+ {path:"wallet",component:WalletComponent},
+ {path:"forgot",component:ForgotPasswordComponent},
+ {path:"check",component:CheckoutComponent}
 ];
 
 @NgModule({

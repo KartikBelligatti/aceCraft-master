@@ -1,1 +1,119 @@
-<p>orderstatus works!</p>
+<div class="container-fluid">
+    <div class="col col-md-12">
+      <div class="text-info container ng-scope" ng-if="tracking_number" >
+        <p class="ng-binding"><b>AWB Number:</b> 4444</p>
+    </div>
+    <div class="row" >
+  
+      <div class="col-md-6 dflex left">
+        <h2 class="proximaThin c">Find  <br>Your<br> <b>Order</b></h2>
+        </div>
+        <div class="col-md-6 dflex right"  >
+          <h2 class="c"><b>Look it up with your shipping number.</b></h2>
+          <div class="">
+            <form [formGroup]="orderFrom" (ngSubmit)="order()">
+              <input type="text"  name="tid" formControlName="tid"ng-model="tracking_number" class="form-control" style="width: 300px; height: 30px;margin-top: 0px;"><br>
+            </form>
+  
+          </div>
+          <button class="btn btn-dark" type="button" (click)="order()"style="width: 180px;">Continue</button><br>
+          <p>Wish to track your order with your Order ID? <a  [routerLink]="['/login']" style="color: #2196F3;">Login</a></p>
+          <p>Need more information? <a data-toggle="modal" href="getintouch" data-target="#exampleModal" style="color: #2196F3;">Get In Touch</a></p>
+          </div>
+    </div>
+  
+  </div>
+  
+  
+  <!-- <div class="modal fade" id="" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fhead"  >Get your Uniforms designed and styled by Us!</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="orderFrom" (ngSubmit)="submitHandler()">
+                    <div class="form-group">
+                        <div class="row d-flex">
+                            <div class="col-6">
+  
+                                <label for="id" class="form-label"
+                                    >Studentfirstname</label>
+                                <input type="text" id="text" name="text" class="form-control"
+                                    formControlName="Studentfirstname" placeholder="">
+                                <div *ngIf="f['Studentfirstname'].touched && f['Studentfirstname'].invalid">
+                                    <div *ngIf="f['Studentfirstname'].errors && f['Studentfirstname'].errors['required']"
+                                        class="text-danger">please enter Studentfirstname
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="id" class="form-label"
+                                   >studentlastname</label>
+                                <input type="text" id="text" name="text" class="form-control"
+                                    formControlName="studentlastname" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="id" class="form-label"
+                                  >Profissional Email</label>
+                                <input type="text" id="text" name="text" class="form-control"
+                                    formControlName="ProfissionalEmail" placeholder="">
+                                <div
+                                    *ngIf="f['ProfissionalEmail'].touched && f['ProfissionalEmail'].invalid">
+                                    <div *ngIf="f['ProfissionalEmail'].errors && f['ProfissionalEmail'].errors['required']"
+                                        class="text-danger">please enter Profissional Email
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="id" class="form-label"
+                                    >Organisation</label>
+                                <input type="text" id="text" name="text" class="form-control"
+                                    formControlName="Organisation" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="id" class="form-label" >Phone
+                                    No</label>
+                                <input type="phone" id="number" name="number" class="form-control"
+                                    formControlName="Phone" placeholder="">
+                            </div>
+                        </div>
+                        <div class="row d-flex">
+                            <div class="col-12">
+                                <label for="id" class="form-label" style="left:-180px; position:relative;margin-top: -60px; "
+                                   >Quantity Required</label>
+  
+                            </div>
+  
+                            <div class="col-12" style="margin-top: -30px; left: -60px; color: #b3b3b3;">
+                              <label for="id" class="form-label" class="mt-5"></label>
+                              <input type="radio" id="radio" name="radio" >&nbsp;10-50 Sets
+                                <label for="id" class="form-label" class="mt-5"></label>
+                                <input type="radio" id="radio" name="radio" >&nbsp;51-100 Sets
+  
+                                <label for="id" class="form-label" class="mt-5"></label>
+                                <input type="radio" id="radio" name="radio" >&nbsp;100+ Sets
+                            </div>
+                              <div class="col-12">
+                            <button class="btn btn-secondary" data-dismiss="modal"
+                                 type="submit">Submit</button>
+  
+                              </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+  </div>
+  </div>
+  </div> -->
+  
