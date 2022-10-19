@@ -59,7 +59,7 @@ const routes: Routes = [
   {path:'payment',component:PaymentComponent},
   {path:'shipping',component:ShippingComponent},
   {path:"viewProduct/:id",component:ViewProductComponent},
-  {path:"cartItem",component:CartItemsComponent,canActivate: [AuthGuard]},
+  {path:"cartItem",component:CartItemsComponent},
   {path:"enterprise",component:EnterprisesComponent},
   {path:"notes",component:NotesComponent},
   {path:"ACING",component:ActingComponent},

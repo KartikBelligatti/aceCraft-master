@@ -21,9 +21,8 @@ body {
 
 .error {
     color: #d8000c;
-    font-weight: bold;
+   
     font-size: 13px;
-    margin-right: 59%;
 }
 
 label {

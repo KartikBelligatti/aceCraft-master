@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,11 +10,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
  // cartCount:number=0;
-  //cartCount: number=0;
+  cartCount: number=0;
 
-  constructor() {
+
+  constructor(private authService:UserService,private cartSvc:CartService) {
     
    }
+
+   auth:boolean=false;
    getCartCount(){
     // this.cartSvc.getCartItems().subscribe (     
     //     (response) =>
@@ -27,11 +32,36 @@ export class NavbarComponent implements OnInit {
   //   this.cartCount=data;
   //   console.log("Subscriber got data >>>>> "+ this.cartCount);
   // });
-auth:boolean=true
-cartCount: number=0;
+
+
   ngOnInit(): void {  
    
-  
+    this.cartSvc.getCartItems().subscribe (     
+      (response) =>
+       {        
+        this.cartCount=response.length;
+        console.log(this.cartCount);
+       }
+     ) 
+    this.cartSvc.countSubject.subscribe (     
+      (response) =>
+       {        
+        this.cartCount=response;
+        console.log(this.cartCount);
+       }
+     )
+     this.authService.authSubject.subscribe(
+      data => 
+      {
+        console.log('auth inside nav component: ' + data);
+        this.auth = data;
+        if(this.auth==false){
+          
+        }
+        
+       
+      }
+    );
     // if(this.auth==true){
     //   this.getCartCount();
     // }

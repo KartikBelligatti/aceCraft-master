@@ -2,7 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { find, Observable, Subject } from 'rxjs';
 import { CartItem } from '../models/cartItem';
-import { environment } from './../../environments/environment'
+import { environment } from './../../environments/environment';
+import swal from 'sweetalert2';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,7 +26,18 @@ export class CartService {
     // this.cartItem.push(product)
 
     this.http.post<CartItem>(this.carturl, product).subscribe(data => {
-      alert("item added to cart Successfull");
+      const Toast = swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      })
+  
+      Toast.fire({
+        icon: 'success',
+        title: 'Item added to cart Successfull'
+      })
       console.log(product)
     })
   }

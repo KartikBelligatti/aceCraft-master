@@ -40,14 +40,14 @@
         height: 100vh;
         border: none;">
         <br><br>
-          <li class="nav-item" *ngIf="auth">
+          <li class="nav-item" *ngIf="!auth">
             <div class="nav-link" routerLink='login'>
               <span class="drop-items">Sign In 
                 <span class='fa fa-solid fa-sign-in drop-items'></span></span>
               
             </div>
           </li>
-          <li class="nav-item" *ngIf="auth">
+          <li class="nav-item" *ngIf="!auth">
             <div class="nav-link" routerLink='register' >
               <span class="drop-items">Register
               
@@ -56,7 +56,7 @@
              
             </div>
           </li>
-          <li class="nav-item" >
+          <li class="nav-item" *ngIf="auth">
             <div class="nav-link" routerLink='orderstatus'>
               <span class="drop-items">Order
                
@@ -64,24 +64,24 @@
             </span>   
           </div>
           </li>
-          <li class="nav-item" style="text-decoration: none;">
+          <li class="nav-item" style="text-decoration: none;" *ngIf="auth">
             <div class="nav-link" routerLink='contact'>
               <span class="drop-items">Contact  <span class='fa fa-solid fa-address-book drop-items' ></span></span>
           </div>
           </li>
-          <li class="nav-item" style="text-decoration: none;" >
+          <li class="nav-item" style="text-decoration: none;" *ngIf="auth" >
             <div class="nav-link" routerLink='account'>
               <span class="drop-items">Account  <span class='fa fa-solid fa-user drop-items' ></span></span>
           </div>
           </li> 
-          <p *ngIf="!auth" class="logout_text" routerLink="login">
+          <p *ngIf="auth" class="logout_text" routerLink="login">
             Logout
           </p>
         </div>
       </div>
     </li>
-      <li class="nav-item ">
-        <button mat-button routerLink='cartItem' matBadge="" matBadgePosition="after" color="gray" style="outline:none;background: transparent;" ngModel>
+      <li class="nav-item " *ngIf="auth">
+        <button mat-button routerLink='cartItem' matBadge="" matBadgePosition="after" color="gray" style="outline:none;background: transparent;" >
           <span class="fa fa-shopping-cart" style="font-size:20px;color:white; ">
             <sup class="text-light" style="font-size: 15px;
             margin-left: 3px;
@@ -90,7 +90,7 @@
             border: 1px solid grey;
             border-radius: 23px;">
                <!-- {{getCartCount()}} -->
-               0
+               {{cartCount}}
               <!-- 1 -->
           </sup></span>
         </button>

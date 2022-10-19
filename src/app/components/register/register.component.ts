@@ -4,6 +4,8 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-register',
@@ -60,13 +62,35 @@ export class RegisterComponent implements OnInit {
   submitHandler(){
     this.submitted = true;
     if (this.registerForm.invalid) {
-      alert("signUp failed");
+      const Toast = swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      })
+  
+      Toast.fire({
+        icon: 'error',
+        title: 'SignUp failed'
+      })
       return ;
   }
    
     this.http.post<any>(this.userurl,this.registerForm.value)
     .subscribe(res=>{
-      alert("signUp Successfull");
+      const Toast = swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      })
+  
+      Toast.fire({
+        icon: 'success',
+        title: 'SignUp Successful'
+      })
       this.registerForm.reset();
       this.router.navigate(['login']);
     })
